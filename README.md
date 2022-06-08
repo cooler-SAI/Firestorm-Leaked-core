@@ -49,3 +49,18 @@ git submodule init && git submodule update --remote
 run ```cppcheck --enable=all --xml-version=2 > PathToFile/cppcheck.xml --inconclusive path PathToFile/wod/src/ --verbose```
 
 and run ```./cppcheck-htmlreport --file=PathToFile/cppcheck.xml --source-dir=PathToFile/wod/src --report-dir=PathToFile/wod/cppcheck/``` to get the html out
+
+How to compile:
+- clone the source. Download Visual studios 2015.
+- Once you do that, download the software in the release section, boost, DotNet, MySQL Community, Vcredist_x64, Win32OpenSSL 1_0_2j.
+- Once you've done this, you must make Boost an environment variable.
+- Download the Cmake version in the release. Run Cmake and build it by using the cloned source directory. You shouldn't have any errors when you use Cmake.
+- After a successful build of Cmake, you should have a build folder or whatever you named it to.
+- Go into that folder, after having VS 2015 installed. Open the .sln file. Once you've done this, select the build from debug to release.
+- Clean the solution & build. Depending on your computer specs this process may take awhile. If it takes a long time, that means it's working as there's a lot of warnings.
+- After a successful build. Go to the release folder that was just made. Make a new folder and copy/paste everything in there. Once you have this, run the authserver/world server. New files should appear.
+- Download the DBC files & maps/mmaps/vmaps/build from the release section & extract those files in that same folder with the worldserver.
+- Download the libssl32.dll libeay32.dll libmysql.dll ssleay32.dll ace.dll libmysqld.dll and copy/paste or extract into same folder.
+- Once you have this all set up. set up your mySQL community account (local). Once you have this set up, go into your authserver.conf & worldserver.conf to set your database usernames/password. auth, characters, hotfix & world.
+- Download Heidi SQL, connect to your local mySQL account with the mySQL service running (won't work if it's not running). Use your login information you used as your mysql account. Import the databases from the release section. You must go into the my.ini file and change the file size allowed to import the world.DB
+- Once everything is imported. Run the authserver & worldserver. Should work without crashing after your worldserver is done loading, create your account & your good to go!
