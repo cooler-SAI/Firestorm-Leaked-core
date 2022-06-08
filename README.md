@@ -50,7 +50,7 @@ run ```cppcheck --enable=all --xml-version=2 > PathToFile/cppcheck.xml --inconcl
 
 and run ```./cppcheck-htmlreport --file=PathToFile/cppcheck.xml --source-dir=PathToFile/wod/src --report-dir=PathToFile/wod/cppcheck/``` to get the html out
 
-How to compile:
+## How to compile
 - clone the source. Download Visual studios 2015.
 - Once you do that, download the software in the release section, boost, DotNet, MySQL Community, Vcredist_x64, Win32OpenSSL 1_0_2j.
 - Once you've done this, you must make Boost an environment variable.
