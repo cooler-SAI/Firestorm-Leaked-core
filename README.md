@@ -53,7 +53,7 @@ and run ```./cppcheck-htmlreport --file=PathToFile/cppcheck.xml --source-dir=Pat
 ## How to compile
 - clone the source. Download Visual studios 2015.
 - Once you do that, download the software in the release section, boost, DotNet, MySQL Community, Vcredist_x64, Win32OpenSSL 1_0_2j.
-- Once you've done this, you must make Boost an environment variable. Instructions to do so inn the software release section
+- Once you've done this, you must make Boost an environment variable. Instructions to do so in the software release section
 - Download the Cmake version in the release. Run Cmake and build it by using the cloned source directory. You shouldn't have any errors when you use Cmake.
 - After a successful build of Cmake, you should have a build folder or whatever you named it to.
 - Go into that folder, after having VS 2015 installed. Open the .sln file. Once you've done this, select the build from debug to release.
